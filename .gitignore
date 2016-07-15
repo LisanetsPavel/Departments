@@ -1,0 +1,19 @@
+*.class
+*.cfg.xml
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+*.iml
+.idea/
+
+*.properties
+
+target/
+*.jpg
+*war

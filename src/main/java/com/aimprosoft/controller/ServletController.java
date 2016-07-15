@@ -26,12 +26,7 @@ public class ServletController implements HttpRequestHandler {
     @Override
     public void handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
         String beanName = httpServletRequest.getRequestURI();
-        Handler handler;
-      if (applicationContext.containsBean(beanName)) {
-          handler = (Handler) applicationContext.getBean(beanName);
-      } else {
-          handler = (Handler) applicationContext.getBean("/");
-      }
+        Handler handler = (Handler) applicationContext.getBean(beanName);
         handler.action(httpServletRequest, httpServletResponse);
     }
 }
